@@ -10,6 +10,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using UserDL;
+using UserModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace UserREST
 {
@@ -31,6 +34,7 @@ namespace UserREST
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "UserREST", Version = "v1" });
             });
+            services.AddDbContext<UserDBContext>(options => options.UseNpgsql(Configuration.GetConnectionString("UserDB")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

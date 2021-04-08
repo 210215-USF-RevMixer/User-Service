@@ -33,6 +33,8 @@ namespace UserModels
             get { return role; }
             set { role = value; }
         }
+        //Collection of reports created by user
+        public ICollection<Report> Reports { get; set; }
 
 
     }

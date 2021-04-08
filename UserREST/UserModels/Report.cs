@@ -48,5 +48,7 @@ namespace UserModels
             get { return description; }
             set { description = value; }
         }
+        //User Property 
+        public User User { get; set; }
     }
 }
