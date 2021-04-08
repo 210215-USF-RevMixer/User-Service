@@ -1,0 +1,55 @@
+trigger:
+  branches:
+    include:
+    - main
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'P3 sonarcloud'
+    organization: '210215-usf-revmixer'
+    scannerMode: 'MSBuild'
+    projectKey: '210215-USF-RevMixer_User-Service'
+    projectName: 'User-Service'
+
+- task: DotNetCoreCLI@2
+  displayName: 'restore'
+  inputs:
+    command: 'restore'
+    projects: '**/*.sln'
+    feedsToUse: 'select'
+
+- task: DotNetCoreCLI@2
+  displayName: 'build'
+  inputs:
+    command: 'build'
+    projects: '**/*.sln'
+
+#- task: DotNetCoreCLI@2
+#  displayName: 'test'
+#  inputs:
+#    command: 'test'
+#    projects: '**/UploadMusicService/UploadMusicTest/*.csproj'
+#    arguments: --configuration $(buildConfiguration) --collect "Code Coverage"
+#  continueOnError: true
+
+#- task: PublishCodeCoverageResults@1
+#  displayName: publish code coverage results
+#  inputs:
+#    codeCoverageTool: 'Cobertura'
+#    summaryFileLocation: '**/coburtura/coverage.xml'
+
+- task: SonarCloudAnalyze@1
+  displayName: run code analysis
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
