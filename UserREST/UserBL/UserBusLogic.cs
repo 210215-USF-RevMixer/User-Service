@@ -11,10 +11,10 @@ namespace UserBL
     /// <summary>
     /// Business logic for User Service
     /// </summary>
-    public class UserBL : IUserBL
+    public class UserBusLogic : IUserBL
     {
         private IUserRepoDB _repo;
-        public UserBL(IUserRepoDB repo)
+        public UserBusLogic(IUserRepoDB repo)
         {
             _repo = repo;
         }
