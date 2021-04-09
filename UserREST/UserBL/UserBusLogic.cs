@@ -33,6 +33,12 @@ namespace UserBL
         {
             return await _repo.DeleteReportAsync(report2BDeleted);
         }
+
+        public async Task<User> DeleteUserAsync(User user2BDeleted)
+        {
+            return await _repo.DeleteUserAsync(user2BDeleted);
+        }
+
         //Get all reports
         public async Task<List<Report>> GetAllReportsAsync()
         {

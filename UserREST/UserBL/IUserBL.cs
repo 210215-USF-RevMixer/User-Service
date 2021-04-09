@@ -29,6 +29,8 @@ namespace UserBL
         Task<Report> DeleteReportAsync(Report report2BDeleted);
         //Update Report
         Task<Report> UpdateReportAsync(Report report2BUpdated);
+        //Delete a User
+        Task<User> DeleteUserAsync(User user2BDeleted);
 
     }
 }

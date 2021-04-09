@@ -19,10 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\UserBL\UserBL.csproj" />
     <ProjectReference Include="..\UserDL\UserDL.csproj" />
     <ProjectReference Include="..\UserModels\UserModels.csproj" />
