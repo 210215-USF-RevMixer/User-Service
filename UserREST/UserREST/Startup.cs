@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UserDL;
+using UserBL;
 using UserModels;
 using Microsoft.EntityFrameworkCore;
 
@@ -34,7 +35,20 @@ namespace UserREST
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "UserREST", Version = "v1" });
             });
+            services.AddCors(
+                options =>
+                {
+                    options.AddDefaultPolicy(
+                        builder =>
+                        {
+                            builder.AllowAnyOrigin()
+                            .AllowAnyMethod()
+                            .AllowAnyHeader();
+                        });
+                });
             services.AddDbContext<UserDBContext>(options => options.UseNpgsql(Configuration.GetConnectionString("UserDB")));
+            services.AddScoped<IUserRepoDB, UserRepoDB>();
+            services.AddScoped<IUserBL, UserBusLogic>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
