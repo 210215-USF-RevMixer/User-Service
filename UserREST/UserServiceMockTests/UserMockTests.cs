@@ -7,14 +7,7 @@ using UserModels;
 using UserREST.Controllers;
 using Xunit;
 
-/*
- 
-GetReportByID
-GetUserByEmail
-GetUserById
-GetAllUsers
-UpdateReportAsync
-UpdateUserAsync*/
+
 namespace UserTests
 {
     public class UserMockTests
@@ -160,6 +153,24 @@ namespace UserTests
             Assert.IsType<StatusCodeResult>(result);
             Assert.Equal(500, ((StatusCodeResult)result).StatusCode);
         }
+
+        //[Fact]
+        //public async Task GetAllUsersAsync_ShouldReturnOkObjectResult()
+        //{
+        //    //arrange
+        //    var userBLMock = new Mock<IUserBL>();
+        //    User user = new User();
+        //    userBLMock.Setup(i => i.GetAllUsersAsync());
+        //    UserController userController = new UserController(userBLMock.Object);
+
+        //    //act 
+        //    var result = await userController.GetAllUsersAsync();
+
+        //    //assert
+        //    Assert.IsType<OkObjectResult>(result);
+        //}
+
+ 
 
     }
 }
