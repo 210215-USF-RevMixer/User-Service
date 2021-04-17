@@ -3,14 +3,14 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0 as build
 
 # baby of mkdir and cd (it makes the directory if it doesn't exist and navigates to that directory)
 WORKDIR /app
-EXPOSE 8080
+
 # copy the sln and csproj files first to restore them and the deps
 COPY *.sln ./
 COPY UserBL/*.csproj UserBL/
 COPY UserDL/*.csproj UserDL/
 COPY UserModels/*.csproj UserModels/
 COPY UserREST/*.csproj UserREST/
-#COPY UserTest/*.csproj UserTest/
+COPY UserServiceMockTests/*.csproj UserServiceMockTests/
 
 # Restores any dependencies the projects would need
 RUN dotnet restore
