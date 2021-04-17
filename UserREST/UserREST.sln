@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserREST", "UserREST\UserREST.csproj", "{594E2EAC-FDCE-463D-BE7F-7451A919FDEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserREST", "UserREST\UserREST.csproj", "{594E2EAC-FDCE-463D-BE7F-7451A919FDEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserModels", "UserModels\UserModels.csproj", "{D850E271-5E4A-4CC5-BCF1-627BD21A95CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserModels", "UserModels\UserModels.csproj", "{D850E271-5E4A-4CC5-BCF1-627BD21A95CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserDL", "UserDL\UserDL.csproj", "{BD43F2F6-E163-4064-8591-7829003E8C03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserDL", "UserDL\UserDL.csproj", "{BD43F2F6-E163-4064-8591-7829003E8C03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserBL", "UserBL\UserBL.csproj", "{A916E86F-8A4C-4515-AAF6-B4CBDACCAA42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserBL", "UserBL\UserBL.csproj", "{A916E86F-8A4C-4515-AAF6-B4CBDACCAA42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserServiceMockTests", "UserServiceMockTests\UserServiceMockTests.csproj", "{D1D16C8E-E289-418E-806C-DC3091EC43BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A916E86F-8A4C-4515-AAF6-B4CBDACCAA42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A916E86F-8A4C-4515-AAF6-B4CBDACCAA42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A916E86F-8A4C-4515-AAF6-B4CBDACCAA42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1D16C8E-E289-418E-806C-DC3091EC43BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1D16C8E-E289-418E-806C-DC3091EC43BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1D16C8E-E289-418E-806C-DC3091EC43BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1D16C8E-E289-418E-806C-DC3091EC43BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
