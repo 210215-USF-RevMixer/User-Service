@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0 as build
 
 # baby of mkdir and cd (it makes the directory if it doesn't exist and navigates to that directory)
 WORKDIR /app
-
+EXPOSE 8080
 # copy the sln and csproj files first to restore them and the deps
 COPY *.sln ./
 COPY UserBL/*.csproj UserBL/
