@@ -10,7 +10,7 @@ COPY UserBL/*.csproj UserBL/
 COPY UserDL/*.csproj UserDL/
 COPY UserModels/*.csproj UserModels/
 COPY UserREST/*.csproj UserREST/
-COPY UserServiceMockTests/*.csproj UserServiceMockTests/
+#COPY UserTest/*.csproj UserTest/
 
 # Restores any dependencies the projects would need
 RUN dotnet restore

@@ -33,19 +33,19 @@ steps:
     command: 'build'
     projects: '**/*.sln'
 
-- task: DotNetCoreCLI@2
-  displayName: 'test'
-  inputs:
-    command: 'test'
-    projects: '**/UserREST/UserServiceMockTests/*.csproj'
-    arguments: --configuration $(buildConfiguration) --collect "Code Coverage"
-  continueOnError: true
+#- task: DotNetCoreCLI@2
+#  displayName: 'test'
+#  inputs:
+#    command: 'test'
+#    projects: '**/UploadMusicService/UploadMusicTest/*.csproj'
+#    arguments: --configuration $(buildConfiguration) --collect "Code Coverage"
+#  continueOnError: true
 
-- task: PublishCodeCoverageResults@1
-  displayName: publish code coverage results
-  inputs:
-    codeCoverageTool: 'Cobertura'
-    summaryFileLocation: '**/coburtura/coverage.xml'
+#- task: PublishCodeCoverageResults@1
+#  displayName: publish code coverage results
+#  inputs:
+#    codeCoverageTool: 'Cobertura'
+#    summaryFileLocation: '**/coburtura/coverage.xml'
 
 - task: SonarCloudAnalyze@1
   displayName: run code analysis
