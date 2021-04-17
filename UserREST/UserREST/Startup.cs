@@ -48,7 +48,7 @@ namespace UserREST
                             .AllowAnyHeader();
                         });
                 });
-            services.AddDbContext<UserDBContext>(options => options.UseNpgsql(Configuration.GetConnectionString("UserDB")));
+            services.AddDbContext<UserDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("UserDB")));
             services.AddScoped<IUserRepoDB, UserRepoDB>();
             services.AddScoped<IUserBL, UserBusLogic>();
         }
