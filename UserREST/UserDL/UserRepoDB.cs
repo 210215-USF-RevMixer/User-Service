@@ -63,7 +63,7 @@ namespace UserDL
                 .Where(r => r.Id == Id)
                 .FirstOrDefaultAsync();
         }
-        //Get a user by email
+        //Get a user by email 
         public async Task<User> GetUserByEmail(string userEmail)
         {
             return await _context.User
