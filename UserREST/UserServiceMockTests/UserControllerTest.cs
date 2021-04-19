@@ -20,6 +20,7 @@ namespace UserServiceMocktests
         {
             _userBLMock = new Mock<IUserBL>();
         }
+        [Fact]
          public async Task GetUsersAsyncShouldReturnUsers()
         {
             //arrange
