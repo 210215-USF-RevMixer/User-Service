@@ -44,7 +44,7 @@ steps:
   displayName: publish code coverage results
   inputs:
     codeCoverageTool: 'Cobertura'
-    summaryFileLocation: '**/coburtura/coverage.xml'
+    summaryFileLocation: '$(Agent.TempDirectory)/**/coburtura/coverage.xml'
 
 - task: SonarCloudAnalyze@1
   displayName: run code analysis
