@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: wyspar123/userservice:768
+        image: wyspar123/userservice:#{Build.BuildId}#
         ports:
         - containerPort: 80
 # kind: Service
