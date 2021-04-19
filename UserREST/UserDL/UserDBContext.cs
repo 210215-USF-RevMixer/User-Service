@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using UserModels;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 
 namespace UserDL
 {
+    [ExcludeFromCodeCoverage]
     /// <summary>
     /// DB Context for User-Service
     /// </summary>
