@@ -38,7 +38,7 @@ namespace UserDL
             modelBuilder.Entity<User>()
                 .HasMany(r => r.Reports)
                 .WithOne(x => x.User)
-                .OnDelete(DeleteBehavior.SetNull); //don't want to delete the rule, just the user associated with it 
+                .OnDelete(DeleteBehavior.Cascade); //don't want to delete the rule, just the user associated with it 
         }
     }
 }

@@ -14,9 +14,11 @@ using UserDL;
 using UserBL;
 using UserModels;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 
 namespace UserREST
 {
+    [ExcludeFromCodeCoverage]
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -48,7 +50,7 @@ namespace UserREST
                             .AllowAnyHeader();
                         });
                 });
-            services.AddDbContext<UserDBContext>(options => options.UseNpgsql(Configuration.GetConnectionString("UserDB")));
+            services.AddDbContext<UserDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("UserDB")));
             services.AddScoped<IUserRepoDB, UserRepoDB>();
             services.AddScoped<IUserBL, UserBusLogic>();
         }
