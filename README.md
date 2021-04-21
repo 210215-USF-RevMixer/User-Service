@@ -95,7 +95,7 @@ User|User
   },
     "AllowedHosts": "*",
     "ConnectionStrings": {
-        "ProjectDB": "<Insert Valid Connection string to a SQL Database>",
+        "UserDB": "<Insert Valid Connection string to a SQL Database>",
         "BlobStorage": "<Insert Valid Blob Storage Connection String>"
     }
 }
